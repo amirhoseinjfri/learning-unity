@@ -5,4 +5,8 @@
 Vector3 tmpPos = transform.position;
 tmpPos.x = Mathf.Clamp(tmpPos.x, -2.0f, 2.0f);
 transform.position = tmpPos;
+
+OR
+
+transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.0f, 2.0f), transform.position.y, transform.position.z)
 ```
