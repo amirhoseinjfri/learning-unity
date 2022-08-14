@@ -15,6 +15,6 @@ transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.0f, 2.0f),
 **Get Position Direction**
 
 برای اینکه جهت دو نقطه را بدست بیاوریم حتی زاویه را از این دستور استفاده میکنیم
-```
+```c#
 Vector3 dir = (this.position - one before the last position).normalized;
 ```
