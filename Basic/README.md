@@ -18,3 +18,11 @@ transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.0f, 2.0f),
 ```c#
 Vector3 dir = (this.position - one before the last position).normalized;
 ```
+
+**Snapping Camera or Gameobject to View**
+
+برای چسباندن یا تغییر مکان یک شی در جهت تماشای ادیتور روی کیبورد در ویندوز و مک کلمات زیر در کیبورد را همزمان بفشارید
+```
+Mac = Command + Shift + F
+PC = Control + Shift + F
+```
