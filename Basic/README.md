@@ -33,3 +33,29 @@ PC = Control + Shift + F
 ```c#
 float distance = Vector3.Distance(start position,end position);
 ```
+
+**Change material texture**
+
+تغییر تکسچر متریال فقط نمیدونم چرا برعکس هستش :)
+```c#
+using UnityEngine.Networking;
+
+void Start()
+{
+    StartCoroutine(DownloadImage("https://spiritgoal.com/D_gogolis_spiritgoal.png"));
+}
+
+IEnumerator DownloadImage(string MediaUrl)
+{
+    UnityWebRequest request = UnityWebRequestTexture.GetTexture(MediaUrl);
+    yield return request.SendWebRequest();
+    if (request.isNetworkError || request.isHttpError)
+    {
+       Debug.Log(request.error);
+    }
+    else
+    {
+       this.gameObject.GetComponent<Renderer>().material.mainTexture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+    }
+}
+```
