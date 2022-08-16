@@ -9,7 +9,7 @@ transform.position = tmpPos;
 
 OR
 
-transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.0f, 2.0f), transform.position.y, transform.position.z)
+transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.0f, 2.0f), transform.position.y, transform.position.z);
 ```
 
 **Get Position Direction**
@@ -25,4 +25,11 @@ Vector3 dir = (this.position - one before the last position).normalized;
 ```
 Mac = Command + Shift + F
 PC = Control + Shift + F
+```
+
+**Distance**
+
+این برای پیدا کردن فاصله بین اجسام میباشد
+```c#
+float distance = Vector3.Distance(start position,end position);
 ```
